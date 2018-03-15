@@ -1,0 +1,17 @@
+{
+  "name": "codbox",
+  "version": "1.0.0",
+  "description": "codbox portfolio Front-end version",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codmen/start_hellper/"
+  },
+  "author": "Andrei Cojocari",
+  "license": "ISC"
+}
