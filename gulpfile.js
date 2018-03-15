@@ -16,7 +16,7 @@ var gulp = require('gulp'),
     reload = browserSync.reload;
 
 var path = {  //Aici salvam fisierele dupa prlucrare
-    build: {
+    dist: {
         html: 'dist/',
         js: 'dist/assets/js/',
         css: 'dist/assets/css/',
@@ -88,12 +88,12 @@ gulp.task('style:dist', function () {
         .pipe(cssmin())  //Minifiem
         .pipe(sourcemaps.write())
         //.pipe(sourcemaps.write('.')) generate main.css.map
-        .pipe(gulp.dest(path.build.css)) //Punm fisierul primit in dist
+        .pipe(gulp.dest(path.dist.css)) //Punm fisierul primit in dist
         .pipe(reload({stream: true}))
         .pipe(notify('CSS is build!'));
 });
 
-gulp.task('image:build', function () {
+gulp.task('image:dist', function () {
     gulp.src(path.src.img)  //Alegm imaginile noastre
         .pipe(imagemin({  //Le minifiam
             progressive: true,
@@ -101,13 +101,13 @@ gulp.task('image:build', function () {
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.build.img)) //le punem in dist
+        .pipe(gulp.dest(path.dist.img)) //le punem in dist
         .pipe(reload({stream: true}));
 });
 
-gulp.task('fonts:build', function() {
+gulp.task('fonts:dist', function() {
     gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.build.fonts));
+        .pipe(gulp.dest(path.dist.fonts));
 
 });
 
