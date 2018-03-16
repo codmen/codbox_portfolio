@@ -1,0 +1,17 @@
+{
+  "name": "portfolio_codbox",
+  "version": "1.0.0",
+  "homepage": "https://github.com/codmen/codbox_portfolio",
+  "authors": [
+    "Andrei Cojocari <webtheory@mail.ru>"
+  ],
+  "description": "Portfolio html+js+css apps",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  }
+}
